@@ -1,0 +1,42 @@
+{{!-- Title and Create Button --}}
+  <div class="row mt-3">
+    <div class="col-lg-6">
+      <h3 class="text-info">Product Detail</h3>
+    </div>
+  </div>
+  <hr class="bg-info">
+
+  {{!-- Displaying Records --}}
+  <div class="row">
+    <div class="col-lg-12">
+      <form>
+        <div class="form-group row">
+          <label for="product_name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            {{model.name}}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="product_weight" class="col-sm-2 col-form-label">Weight</label>
+          <div class="col-sm-10">
+            {{model.weight}}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="product_price" class="col-sm-2 col-form-label">Price</label>
+          <div class="col-sm-10">
+            {{model.price}}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            {{#link-to "product.edit" model.id class="btn btn-primary"}}Edit{{/link-to}}
+            {{#link-to "product" class="btn btn-primary"}}Close{{/link-to}}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

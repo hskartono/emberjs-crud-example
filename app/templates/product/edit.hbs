@@ -1,0 +1,42 @@
+{{!-- Title and Create Button --}}
+  <div class="row mt-3">
+    <div class="col-lg-6">
+      <h3 class="text-info">Edit Product</h3>
+    </div>
+  </div>
+  <hr class="bg-info">
+
+  {{!-- Displaying Records --}}
+  <div class="row">
+    <div class="col-lg-12">
+      <form>
+        <div class="form-group row">
+          <label for="product_name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            {{ input type="text" class="form-control" value=model.name placeholder="Product name" }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="product_weight" class="col-sm-2 col-form-label">Weight</label>
+          <div class="col-sm-10">
+            {{ input type="text" class="form-control" value=model.weight placeholder="Weight (Kg)" }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="product_price" class="col-sm-2 col-form-label">Price</label>
+          <div class="col-sm-10">
+            {{ input type="number" class="form-control" value=model.price placeholder="Price (IDR)" }}
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button class="btn btn-primary" {{action "saveProduct"}}>Save</button>
+            {{#link-to "product" class="btn btn-danger"}}Cancel{{/link-to}}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
