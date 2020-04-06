@@ -14,8 +14,5 @@ export default function() {
 
   this.patch('/products/:id', 'product');
 
-  this.del('/products/:id', (schema, request) => {
-    let id = request.params.id;
-    schema.product.find(id).destroy();
-  });
+  this.del('/products/:id', 'product');
 }

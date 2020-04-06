@@ -33,7 +33,7 @@
               <td>{{product.weight}} Kg</td>
               <td>{{product.price}}</td>
               <td>{{#link-to "product.edit" product.id class="text-success"}}{{fa-icon "edit"}}{{/link-to}}</td>
-              <td><a href="#" class="text-danger">{{fa-icon "trash-alt"}}</a></td>
+              <td><a href="#" class="text-danger" {{action "deleteProduct" product.id}} >{{fa-icon "trash-alt"}}</a></td>
             </tr>
           {{/each}}
         </tbody>
