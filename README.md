@@ -1,7 +1,7 @@
-# apotik
+# emberjs-crud-example
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a working example of CRUD operation using ember.js 3.8 with mirage.
+Currently, the crud only using simple textbox input. Will be added more complex control.
 
 ## Prerequisites
 
