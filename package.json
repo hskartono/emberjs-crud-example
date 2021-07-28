@@ -55,5 +55,8 @@
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "ember-mirage-sauce": "^0.2.2"
   }
 }

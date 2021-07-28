@@ -4,10 +4,18 @@ export default Route.extend({
     queryParams: {
         page: {
             refreshModel: true
+        },
+        size: {
+            refreshModel: true
         }
     },
     model(params) {
-        return this.store.query('product', params).then((results)=>{
+        return this.store.query('product', {
+            page: {
+                number: params.page,
+                size: params.perPage
+            }
+        }).then((results)=>{
             return {
                 products: results,
                 meta: results.get('meta')

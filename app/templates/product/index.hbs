@@ -39,7 +39,9 @@
         </tbody>
       </table>
       <div class="clearfix">
-        <div class="hint-text">Page <b>{{ meta.pagination.page }}</b> out of <b>{{ meta.pagination.totalPage }}</b></div>
+        <button class="btn btn-primary" {{action "movePrev" meta.page}}>Prev</button>
+        <div class="hint-text">Page <b>{{ meta.page }}</b> out of <b>{{ meta.pages }}</b></div>
+        <button class="btn btn-primary" {{action "moveNext" meta.page}}>Next</button>
       </div>
     </div>
   </div>
